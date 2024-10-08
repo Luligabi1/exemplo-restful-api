@@ -1,0 +1,36 @@
+### Todos os produtos
+GET http://0.0.0.0:8080/produto/
+Accept: application/json
+### Produtos com qualquer oferta
+GET http://0.0.0.0:8080/produto/oferta/
+Accept: application/json
+### Produtos com ofertas normais
+GET http://0.0.0.0:8080/produto/oferta/normal
+Accept: application/json
+### Produtos com ofertas exclusivas para o clube
+GET http://0.0.0.0:8080/produto/oferta/clube
+Accept: application/json
+### Produtos de categoria inválida - fallback para qualquer oferta
+GET http://0.0.0.0:8080/produto/oferta/categoria_invalida
+Accept: application/json
+### Adicionar novo produto
+POST http://0.0.0.0:8080/produto
+Content-Type: application/json
+
+{
+  "nome": "Geladeira",
+  "valor": 3100.99,
+  "oferta": "CLUBE"
+}
+### Atualizar produto existente
+PUT http://0.0.0.0:8080/produto
+Content-Type: application/json
+
+{
+  "nome": "Sabonete",
+  "valor": 1.99,
+  "oferta": "CLUBE"
+}
+### Remover um produto
+DELETE http://0.0.0.0:8080/produto/Sabonete
+Content-Type: application/json

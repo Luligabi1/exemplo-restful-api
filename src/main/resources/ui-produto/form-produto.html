@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar produto</title>
+</head>
+<body>
+<h1>Adicionar produto</h1>
+<form method="post" action="/produto">
+    <div>
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" name="nome" size="10">
+    </div>
+    <div>
+        <label for="valor">Valor: </label>
+        <input type="number" step="0.01" id="valor" name="valor" size="20">
+    </div>
+    <div>
+        <label for="oferta">Tipo de Oferta: </label>
+        <select id="oferta" name="oferta">
+            <option name="Sem Oferta"></option>
+            <option name="Normal">Normal</option>
+            <option name="Clube">Clube</option>
+        </select>
+    </div>
+    <input type="submit">
+</form>
+</body>
+</html>
